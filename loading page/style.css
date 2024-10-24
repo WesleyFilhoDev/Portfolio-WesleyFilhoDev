@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'logo';
+    src: url(../fontes/MPLUS1p-Bold.ttf);
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+
+p {
+    font-family: 'logo';
+    font-size: 20px;
+    color: white;
+    padding-top: 7px;
+}
+
+.dev {
+    color: rgba(0, 102, 255, 1);
+    font-size: 16px;
+    margin-top: 1rem;
+}
+
+hr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleX(0); /* Começa no centro, com escala horizontal 0 */
+    transform-origin: center; /* Origem da transformação é o centro */
+    border: none;
+    border-top: 5px solid rgba(0, 102, 255, 1);
+    width: 100vw; /* A linha cobre 100% da largura da viewport */
+    animation: loadEffect 3s forwards;
+}
+
+@keyframes loadEffect {
+    
+    0% {
+        transform: translate(-50%, -50%) scaleX(0); /* Inicia do centro com escala 0 */
+    }
+    100% {
+        transform: translate(-50%, -50%) scaleX(1); /* Cresce até ocupar toda a largura */
+    }
+}
+
+
+.container_loading {
+    text-align: center;
+    width: 10rem;
+}
