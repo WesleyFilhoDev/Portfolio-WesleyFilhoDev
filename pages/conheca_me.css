@@ -46,7 +46,7 @@ ul {
     align-items: center;
     flex-direction: row;
     list-style-type: none;
-    gap: 3rem;
+    gap: 5rem;
 }
 
 img {
@@ -57,7 +57,7 @@ img {
 
 nav p {
     font-family: 'kuliumpark';
-    font-size: 36px;
+    font-size: 27px;
     color: white;
 }
 
