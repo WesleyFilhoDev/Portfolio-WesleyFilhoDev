@@ -29,7 +29,6 @@ a {
     text-decoration: none;
 }
 
-
 .container_navbar {
     display: flex;
     align-items: center;
@@ -133,7 +132,7 @@ em {
     justify-content: center;
     align-items: center;
     gap: 10rem;
-    padding-top: 15rem;
+    padding-top: 6rem;
 }
 
 .ferramentas p {
@@ -144,7 +143,7 @@ em {
 }
 
 .trabalhos {
-    padding-top: 10rem;
+    padding-top: 6rem;
     margin-top: 0;
 }
 
@@ -161,41 +160,72 @@ em {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 8rem;
-    margin-top: 10rem;
+    margin-top: 4rem;
 }
 
 .um {
     width: 314px;
     height: 165px;
+    border-radius: 50px;
     background-color: rgba(0, 102, 255, 1);
 }
 
 .dois {
     width: 314px;
     height: 165px;
+    border-radius: 50px;
     background-color: rgba(0, 102, 255, 1);
 }
 
 .tres {
     width: 314px;
     height: 165px;
+    border-radius: 50px;
     background-color: rgba(0, 102, 255, 1);;
 }
 
 .quatro {
     width: 314px;
     height: 165px;
+    border-radius: 50px;
     background-color: rgba(0, 102, 255, 1);
 }
 
 .cinco {
     width: 314px;
     height: 165px;
+    border-radius: 50px;
     background-color: rgba(0, 102, 255, 1);;
 }
 
 .seis {
     width: 314px;
     height: 165px;
+    border-radius: 50px;
     background-color: rgba(0, 102, 255, 1);;
+}
+
+.contato p {
+    color: white;
+    font-family: 'orbitron';
+    font-size: 36px;
+    text-align: center;
+}
+
+.contato {
+    margin-top: 6rem;
+}
+
+.container_logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 8rem;
+}
+
+.container_logos div img {
+    width: 80px;
+    height: 80px;
 }
