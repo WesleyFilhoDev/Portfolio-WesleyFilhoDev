@@ -118,14 +118,14 @@ em {
 }
 
 .picture {
-    padding-left: 20rem;
     width: auto;
     height: auto;
+    margin-top: -5rem;
 }
 
 .my_picture {
-    width: 450px;
-    height: 570px;
+    width: 500px;
+    height: 630px;
 }
 .ferramentas {
     padding-top: 10rem;
