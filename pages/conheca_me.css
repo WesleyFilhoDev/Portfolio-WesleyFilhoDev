@@ -126,6 +126,7 @@ em {
 .my_picture {
     width: 500px;
     height: 630px;
+    padding-right: 4rem;
 }
 .ferramentas {
     padding-top: 10rem;
