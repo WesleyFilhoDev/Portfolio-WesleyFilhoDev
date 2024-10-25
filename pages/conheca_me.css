@@ -56,6 +56,11 @@ img {
     width:230px;
     height: 100%;
     padding-top: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+img :active {
+    transform: scale(1.2);
 }
 
 nav p {
