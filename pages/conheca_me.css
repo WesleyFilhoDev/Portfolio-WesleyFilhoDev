@@ -17,15 +17,20 @@ body {
 }
 
 nav {
-    position: fixed; /* Mantém a barra de navegação fixa no topo */
-    top: 0; /* Alinha a barra ao topo da página */
-    left: 0; /* Alinha a barra à esquerda */
-    width: 100%; /* Faz a barra de navegação ocupar toda a largura da tela */
-    z-index: 1000; /* Garante que a barra fique acima de outros elementos */
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
 }
 
 a {
     text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+a :active {
+    transform: scale(1.1);
 }
 
 .container_navbar {
