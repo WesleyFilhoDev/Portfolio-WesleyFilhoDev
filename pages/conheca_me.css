@@ -157,6 +157,22 @@ em {
     height: 1024px;
 }
 
+.container_trabalhos div {
+    width: 314px;
+    height: 165px;
+    border-radius: 50px;
+    background-color: rgba(0, 102, 255, 1);
+    transition: transform 0.3s ease;
+}
+
+.container_trabalhos :hover {
+    transform: scale(1.1);
+}
+
+.container_trabalhos :active {
+    transform: scale(1.2);
+}
+
 .trabalhos h1 {
     font-family: 'orbitron';
     font-size: 36px;
@@ -173,47 +189,6 @@ em {
     margin-top: 4rem;
 }
 
-.um {
-    width: 314px;
-    height: 165px;
-    border-radius: 50px;
-    background-color: rgba(0, 102, 255, 1);
-}
-
-.dois {
-    width: 314px;
-    height: 165px;
-    border-radius: 50px;
-    background-color: rgba(0, 102, 255, 1);
-}
-
-.tres {
-    width: 314px;
-    height: 165px;
-    border-radius: 50px;
-    background-color: rgba(0, 102, 255, 1);;
-}
-
-.quatro {
-    width: 314px;
-    height: 165px;
-    border-radius: 50px;
-    background-color: rgba(0, 102, 255, 1);
-}
-
-.cinco {
-    width: 314px;
-    height: 165px;
-    border-radius: 50px;
-    background-color: rgba(0, 102, 255, 1);
-}
-
-.seis {
-    width: 314px;
-    height: 165px;
-    border-radius: 50px;
-    background-color: rgba(0, 102, 255, 1);
-}
 
 .contato p {
     color: white;
