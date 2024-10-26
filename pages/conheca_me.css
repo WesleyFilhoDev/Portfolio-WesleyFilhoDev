@@ -199,6 +199,13 @@ em {
     margin-top: 4rem;
 }
 
+.container_logos div {
+    transition: transform 0.3s ease;
+}
+
+.container_logos :hover {
+    transform: scale(1.1);
+}
 
 .contato p {
     color: white;
