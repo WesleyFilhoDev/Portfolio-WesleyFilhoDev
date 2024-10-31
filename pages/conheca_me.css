@@ -244,6 +244,16 @@ em {
     margin-top: -2rem;
 }
 
+a h2 {
+    text-align: center;
+    font-family: 'kuliumpark';
+    color: white;
+}
+
+#healnet.dark {
+    color: black;
+}
+
 .container_trabalhos :hover {
     transform: scale(1.1);
 }
