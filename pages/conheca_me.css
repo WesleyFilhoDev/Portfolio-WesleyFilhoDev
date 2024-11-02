@@ -244,6 +244,13 @@ em {
     margin-top: -2rem;
 }
 
+.formulario {
+    width: 314px;
+    height: 190px;
+    object-fit: cover;
+    margin-top: -2rem;
+}
+
 a h2 {
     text-align: center;
     font-family: 'kuliumpark';
@@ -251,6 +258,10 @@ a h2 {
 }
 
 #healnet.dark {
+    color: black;
+}
+
+#formulario.dark {
     color: black;
 }
 

@@ -10,6 +10,7 @@ const p5 = document.getElementById('p5');
 const p6 = document.getElementById('p6');
 const title_trabalho = document.getElementById('title_trabalho');
 const healnet = document.getElementById('healnet');
+const formulario = document.getElementById('formulario');
 const contato = document.getElementById('contato');
 
 buttom_mode.addEventListener('click', () =>{
@@ -24,6 +25,7 @@ buttom_mode.addEventListener('click', () =>{
     p6.classList.toggle('dark');
     title_trabalho.classList.toggle('dark');
     healnet.classList.toggle('dark')
+    formulario.classList.toggle('dark');
     contato.classList.toggle('dark');
 });
 
