@@ -257,6 +257,13 @@ em {
     margin-top: -2rem;
 }
 
+.jogo_senha {
+    width: 314px;
+    height: 190px;
+    object-fit: cover;
+    margin-top: -2rem;
+}
+
 a h2 {
     text-align: center;
     font-family: 'kuliumpark';
@@ -270,6 +277,12 @@ a h2 {
 #formulario.dark {
     color: black;
 }
+
+#jogo_senha.dark {
+    color: black;
+}
+
+
 
 .container_trabalhos :hover {
     transform: scale(1.1);

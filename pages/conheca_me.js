@@ -11,6 +11,7 @@ const p6 = document.getElementById('p6');
 const title_trabalho = document.getElementById('title_trabalho');
 const healnet = document.getElementById('healnet');
 const formulario = document.getElementById('formulario');
+const jogo_senha = document.getElementById('jogo_senha');
 const contato = document.getElementById('contato');
 
 buttom_mode.addEventListener('click', () =>{
@@ -26,6 +27,7 @@ buttom_mode.addEventListener('click', () =>{
     title_trabalho.classList.toggle('dark');
     healnet.classList.toggle('dark')
     formulario.classList.toggle('dark');
+    jogo_senha.classList.toggle('dark');
     contato.classList.toggle('dark');
 });
 
