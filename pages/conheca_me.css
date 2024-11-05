@@ -230,12 +230,18 @@ em {
 }
 
 .container_trabalhos div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px;
     width: 314px;
     height: 165px;
     align-items: center;
-    background-color: rgba(0, 102, 255, 1);
     transition: transform 0.3s ease;
 }
+
+
 
 .heal_net {
     width: 314px;
