@@ -1,3 +1,5 @@
+/*VERSÃO DESKTOP*/
+
 @font-face {
     font-family: 'kuliumpark';
     src: url(../fontes/KulimPark-Regular.ttf);
@@ -146,8 +148,7 @@ h1 {
 .container_conhecame {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    
+    flex-wrap: nowrap;   
 }
 
 .apresentation {
@@ -346,4 +347,36 @@ a h2 {
 .container_logos div img {
     width: 80px;
     height: 80px;
+}
+
+/*VERSÃO CELULAR*/
+
+@media screen and (max-width: 1020px) {
+    
+    /*CABEÇALHO*/
+    .container_navbar {
+        display: none;
+    }
+
+
+    /*SECTION CONHECA-ME*/
+    .container_conhecame {
+        flex-direction: column-reverse;
+    }
+
+    .my_picture {
+        width: 350px;
+        height: 450px;
+        padding: 20px;
+    }
+
+    .apresentation {
+        text-align: center;
+        
+    }
+
+    h1 {
+        font-size: 33px;
+        
+    }
 }
