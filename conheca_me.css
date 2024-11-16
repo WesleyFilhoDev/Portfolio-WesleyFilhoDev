@@ -242,8 +242,6 @@ em {
     transition: transform 0.3s ease;
 }
 
-
-
 .heal_net {
     width: 314px;
     height: 190px;
@@ -282,8 +280,6 @@ a h2 {
 #jogo_senha.dark {
     color: black;
 }
-
-
 
 .container_trabalhos :hover {
     transform: scale(1.1);
@@ -362,21 +358,41 @@ a h2 {
     /*SECTION CONHECA-ME*/
     .container_conhecame {
         flex-direction: column-reverse;
+        padding-right: 4rem;
     }
 
     .my_picture {
         width: 350px;
         height: 450px;
         padding: 20px;
+        margin-bottom: -4rem;
     }
 
-    .apresentation {
-        text-align: center;
-        
-    }
 
     h1 {
-        font-size: 33px;
-        
+        font-size: 40px;
+        text-align: center;
     }
+
+    /*SECTION FERRAMENTAS*/
+    .container_ferramentas {
+        flex-direction: column-reverse;
+        margin-top: 40rem;
+        gap: 3px;
+    }
+
+    .trabalhos {
+        margin-top: 80rem;
+    }
+
+    /*SECTION CONTATOS*/
+    .trabalhos {
+        margin-top: 120rem;
+    }
+
+    .container_logos {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
 }
