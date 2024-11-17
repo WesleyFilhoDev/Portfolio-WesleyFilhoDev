@@ -345,47 +345,65 @@ a h2 {
     height: 80px;
 }
 
+.my_logo2 {
+    display: none;
+}
+
 /*VERSÃO CELULAR*/
 
 @media screen and (max-width: 1020px) {
 
     /*MENU*/
+    .my_logo2 {
+        color: white;
+        position: absolute; /* Permite posicionamento personalizado */
+        top: 30px; /* Ajusta a distância do topo */
+        left: 70px; /* Ajusta a distância da borda direita */
+        width: 5px; /* Define largura do ícone */
+        height: 5px; /* Define altura do ícone */
+        font-size: 10px;
+        display: flex; /* Centraliza o conteúdo dentro da div */
+        justify-content: center;
+        align-items: center;
+    }
+
     .btn_abrir_menu i {
-            color: white;
-            position: absolute; /* Permite posicionamento personalizado */
-            top: 10px; /* Ajusta a distância do topo */
-            right: 10px; /* Ajusta a distância da borda direita */
-            width: 40px; /* Define largura do ícone */
-            height: 40px; /* Define altura do ícone */
-            font-size: 30px;
-            display: flex; /* Centraliza o conteúdo dentro da div */
-            justify-content: center;
-            align-items: center;
-            position: fixed;
+        color: white;
+        position: absolute; /* Permite posicionamento personalizado */
+        top: 10px; /* Ajusta a distância do topo */
+        right: 10px; /* Ajusta a distância da borda direita */
+        width: 40px; /* Define largura do ícone */
+        height: 40px; /* Define altura do ícone */
+        font-size: 40px;
+        display: flex; /* Centraliza o conteúdo dentro da div */
+        justify-content: center;
+        align-items: center;
+        position: fixed;
     }
 
     .menu_mobile .btn_close {
-        margin-top: -14rem;
+        margin-top: -40rem;
         padding: 10px;
         font-size: 25px;
+        position: fixed;
     }
 
     .menu_mobile {
-            display: flex; /* Garante que o menu é exibido */
-            flex-direction: column;
-            justify-content: center;
-            align-items: start;
-            padding-bottom: 5rem;
-            position: fixed; /* Posiciona o menu na tela */
-            top: 0;
-            right: 0;
-            width: 0%;
-            height: 100%;
-            background-color: rgba(0, 102, 255, 1); /* Apenas para visualização */
-            z-index: 9999; /* Coloca o menu acima de outros elementos */
-            border-radius: 5px;
-            overflow: hidden;
-            transition: .4s;
+        display: flex; /* Garante que o menu é exibido */
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding-bottom: 5rem;
+        position: fixed; /* Posiciona o menu na tela */
+        top: 0;
+        right: 0;
+        width: 0%;
+        height: 100%;
+        background-color: rgba(0, 102, 255, 1); /* Apenas para visualização */
+        z-index: 9999; /* Coloca o menu acima de outros elementos */
+        border-radius: 5px;
+        overflow: hidden;
+        transition: .4s;
     }
 
     .menu_mobile.abrir_menu {
@@ -400,25 +418,26 @@ a h2 {
     .menu_mobile ul {
         display: flex;
         flex-direction: column;
+        align-items: flex-end;
+        padding-bottom: 400px;
+        padding-left: 127px;
+        gap: 30px;
+        position: absolute;
     }
 
     .menu_mobile ul li a {
         color: black;
         font-family: 'kuliumpark';
-        font-size: 2rem;
+        font-size: 1.4rem;
         display: block;
+    }
+
+    .menu_mobile ul li a:hover {
+        background: white;
     }
 
     .menu_mobile ul li a:active {
         background: white;
-    }
-
-    .li_trabalhos {
-        padding-right: 2rem;
-    }
-
-    .li_contato {
-        padding-right: 3.5rem;
     }
 
     .overlay_menu {
