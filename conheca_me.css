@@ -433,8 +433,6 @@ a h2 {
     }
 
     /*CABEÇALHO*/
-    
-
     .container_navbar {
         display: none;
     }
@@ -443,7 +441,6 @@ a h2 {
     /*SECTION CONHECA-ME*/
     .container_conhecame {
         flex-direction: column-reverse;
-        padding-right: 4rem;
     }
 
     .my_picture {
@@ -457,22 +454,58 @@ a h2 {
     h1 {
         font-size: 40px;
         text-align: center;
+        margin-right: 5rem;
+    }
+
+    .apresentation {
+        width: 19rem;
+    }
+
+    .apresentation p {
+        margin-left: -5rem;
+        font-size: 25px;
+        padding-bottom: -5rem;
     }
 
     /*SECTION FERRAMENTAS*/
-    .container_ferramentas {
-        flex-direction: column-reverse;
-        margin-top: 40rem;
-        gap: 3px;
+    .ferramentas {
+        padding-top: 0;
     }
 
+    .container_ferramentas {
+        flex-direction: column-reverse;
+        padding-top: 5px;
+    }
+
+    .img_html, .img_css, .img_js {
+        width: 13rem;
+        height: 13rem;
+    }
+
+    .container_ferramentas p {
+        padding-left: 10px;
+    }
+
+    /*SECTION TRABALHOS*/
+
     .trabalhos {
-        margin-top: 80rem;
+        padding-top: 0;
+    }
+
+    .trabalhos h1 {
+        width: 25rem;
+        font-size: 30px;
     }
 
     /*SECTION CONTATOS*/
     .contato {
-        margin-top: 40rem;
+        padding-top: 0;
+    }
+
+    .contato p {
+        padding-top: 50px;
+        padding-left: 20px;
+        font-size: 30px;
     }
 
     .container_logos {
