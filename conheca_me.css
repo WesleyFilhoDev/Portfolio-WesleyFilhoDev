@@ -243,23 +243,26 @@ em {
 }
 
 .heal_net {
-    width: 314px;
+    width: 320px;
     height: 190px;
     object-fit: cover;
+    border-radius: 7px;
     margin-top: -2rem;
 }
 
 .formulario {
-    width: 314px;
+    width: 320px;
     height: 190px;
     object-fit: cover;
+    border-radius: 7px;
     margin-top: -2rem;
 }
 
-.jogo_senha {
-    width: 314px;
+.site_fanta {
+    width: 320px;
     height: 190px;
     object-fit: cover;
+    border-radius: 7px;
     margin-top: -2rem;
 }
 
@@ -277,7 +280,7 @@ a h2 {
     color: black;
 }
 
-#jogo_senha.dark {
+#site_fanta.dark {
     color: black;
 }
 
