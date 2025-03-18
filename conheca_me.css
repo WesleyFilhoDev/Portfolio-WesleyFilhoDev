@@ -196,8 +196,23 @@ em {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10rem;
     padding-top: 6rem;
+}
+
+.nextjs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 220px;
+    height: 220px;
+    padding: 20px;
+    background-color: white;
+}
+
+.nextjsimg {
+    margin-top: -10px;
 }
 
 .ferramentas p {
@@ -216,6 +231,14 @@ em {
 }
 
 #p6.dark {
+    color: black;
+}
+
+#p7.dark {
+    color: black;
+}
+
+#p8.dark {
     color: black;
 }
 

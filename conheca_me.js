@@ -8,6 +8,8 @@ const p3 = document.getElementById('p3');
 const p4 = document.getElementById('p4');
 const p5 = document.getElementById('p5');
 const p6 = document.getElementById('p6');
+const p7 = document.getElementById('p7');
+const p8 = document.getElementById('p8');
 const title_trabalho = document.getElementById('title_trabalho');
 const healnet = document.getElementById('healnet');
 const formulario = document.getElementById('formulario');
@@ -27,6 +29,8 @@ buttom_mode.addEventListener('click', () =>{
     p4.classList.toggle('dark');
     p5.classList.toggle('dark');
     p6.classList.toggle('dark');
+    p7.classList.toggle('dark');
+    p8.classList.toggle('dark');
     title_trabalho.classList.toggle('dark');
     healnet.classList.toggle('dark')
     formulario.classList.toggle('dark');
