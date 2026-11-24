@@ -32,7 +32,7 @@ export function About() {
           <p className="eyebrow">Sobre mim</p>
         </div>
         <h2 className="about__title">
-          Prazer, eu sou o Wesley<span className="accent">.</span>
+          Prazer, eu sou Wesley<span className="accent">.</span>
         </h2>
         <p className="about__bio">
           Sou desenvolvedor web e trato cada projeto como se fosse meu. Antes de criar qualquer coisa, gosto de

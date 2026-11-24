@@ -6,7 +6,7 @@
 
 .hero {
   /* Quanto menor, mais "de longe" a foto aparece (1 = ocupando a hero inteira). */
-  --hero-photo-scale: 0.74;
+  --hero-photo-scale: 0.65;
 }
 
 /* Área da foto: no máximo 1440px, para o zoom não crescer em telas maiores. */

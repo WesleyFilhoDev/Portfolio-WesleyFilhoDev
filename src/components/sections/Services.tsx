@@ -9,9 +9,6 @@ export function Services() {
           <p className="eyebrow">Serviços</p>
           <h2 className="section-title">Um traço, várias soluções</h2>
         </div>
-        <p className="section-lede">
-          Assim como o W vira F na marca, cada serviço puxa o próximo: do link bio ao sistema completo.
-        </p>
       </div>
       <ServicesTrail />
     </section>
