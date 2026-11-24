@@ -1,0 +1,64 @@
+/* Wesley Filho Dev — design tokens (generated from the wfdev design system tokens.json) */
+:root, [data-theme="dark"] {
+  --bg: #07080c;
+  --surface: #0c0f19;
+  --surface-raised: #0e1222;
+  --night: #121a3a;
+  --line: #1c2433;
+  --line-strong: #5b6578;
+  --ink: #f2f5fa;
+  --ink-muted: #9aa6ba;
+  --brand: #2563eb;
+  --brand-hover: #1d4ed8;
+  --brand-ink: #7fa6ff;
+  --brand-soft: #121a3a;
+  --on-brand: #ffffff;
+  --accent: #22d3ee;
+  --accent-ink: #22d3ee;
+  --accent-soft: #0b2a33;
+  --on-accent: #07080c;
+  --logo-main: #2563eb;
+  --logo-accent: #22d3ee;
+  --focus: #22d3ee;
+  --success: #4ade80;
+  --success-soft: #0b2a1a;
+  --danger: #f87171;
+  --shadow-card: none;
+}
+[data-theme="light"] {
+  --bg: #f7f9fc;
+  --surface: #ffffff;
+  --surface-raised: #f1f4f9;
+  --line: #dce3ee;
+  --line-strong: #7a879b;
+  --ink: #07080c;
+  --ink-muted: #4a5468;
+  --brand-ink: #1d4ed8;
+  --brand-soft: #e8eefc;
+  --accent-ink: #0e7490;
+  --accent-soft: #ddf6fb;
+  --logo-main: #07080c;
+  --logo-accent: #2563eb;
+  --focus: #2563eb;
+  --success: #15803d;
+  --success-soft: #dcfce7;
+  --danger: #b91c1c;
+  --shadow-card: 0 1px 2px rgba(7, 8, 12, 0.06), 0 8px 24px rgba(7, 8, 12, 0.06);
+}
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  --font-sans: var(--font-manrope), Manrope, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
