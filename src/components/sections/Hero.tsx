@@ -8,16 +8,18 @@ export function Hero() {
   const last = heroServices.length - 1;
   return (
     <section id="inicio" className="hero">
-      <Image
-        className="hero__img"
-        src={heroImg}
-        alt="Wesley Filho sorrindo, de boné e moletom pretos, com as luzes da cidade à noite ao fundo"
-        fill
-        priority
-        sizes="100vw"
-        quality={90}
-        placeholder="blur"
-      />
+      <div className="hero__photo">
+        <Image
+          className="hero__img"
+          src={heroImg}
+          alt="Wesley Filho sorrindo, de boné e moletom pretos, com as luzes da cidade à noite ao fundo"
+          fill
+          priority
+          sizes="(min-width: 1440px) 1440px, 100vw"
+          quality={90}
+          placeholder="blur"
+        />
+      </div>
 
       <ul className="orbit" aria-label="Serviços">
         {heroServices.map((label, i) => (
