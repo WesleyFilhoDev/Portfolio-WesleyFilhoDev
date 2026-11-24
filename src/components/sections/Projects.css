@@ -20,27 +20,68 @@
 }
 
 .marquee__row {
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   padding: 14px 0;
+  cursor: grab;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
   -webkit-mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+}
+
+.marquee__row::-webkit-scrollbar {
+  display: none;
+}
+
+.marquee__row--dragging {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.marquee__row--dragging .project-card {
+  pointer-events: none;
 }
 
 .marquee__track {
   display: flex;
   gap: 24px;
   width: max-content;
-  animation: marquee-left 60s linear infinite;
 }
 
-.marquee__row--reverse .marquee__track {
-  animation-name: marquee-right;
-  animation-duration: 70s;
+/* Setas de navegação */
+.marquee-nav {
+  display: flex;
+  gap: 8px;
 }
 
-.marquee:hover .marquee__track,
-.marquee:focus-within .marquee__track {
-  animation-play-state: paused;
+.marquee-nav__btn {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  stroke: currentColor;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.marquee-nav__btn:hover {
+  background: var(--brand-soft);
+  border-color: var(--brand);
+}
+
+.marquee-nav__btn:active {
+  transform: scale(0.94);
+}
+
+.marquee-nav__btn:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
 }
 
 .project-card {
@@ -221,20 +262,7 @@
 .mock--bio .mock__link--brand { background: var(--brand); }
 .mock--bio .mock__link--outline { background: none; border: 1px solid var(--accent); }
 
-@keyframes marquee-left {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-@keyframes marquee-right {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
-}
-
 @media (max-width: 760px) {
   .project-card { width: 280px; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .marquee__track { animation-play-state: paused; }
-}
