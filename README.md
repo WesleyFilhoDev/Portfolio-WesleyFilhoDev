@@ -22,6 +22,7 @@ src/
     globals.css       # base + peças compartilhadas (eyebrow, títulos de seção)
     icon.svg          # favicon com o monograma WF
   assets/images/      # fotos da hero e do "Sobre"
+  assets/images/projects/  # prints da tela inicial de cada projeto
   components/
     brand/            # Mark, Logo, Button — portados do design system wfdev
     layout/           # SplashScreen, NavBar, Footer
@@ -33,7 +34,13 @@ src/
 
 ## Antes de publicar
 
-Os campos entre colchetes em `src/data/site.ts` são placeholders: `[SEU WHATSAPP]`, `[SEU E-MAIL]`,
-`[SEU @]`, os nomes `[PROJETO 01…08]` e os links (`href: '#'`). Troque pelos dados reais.
+Os campos entre colchetes em `src/data/site.ts` são placeholders: `[SEU WHATSAPP]`, `[SEU E-MAIL]`
+e `[SEU @]` (e os links `href: '#'` dos contatos). Troque pelos dados reais.
+
+## Projetos
+
+Cada projeto em `projects` (`src/data/site.ts`) tem nome, tipo, link do site no ar e o print da tela
+inicial (1440×900) em `src/assets/images/projects/`. O card abre o site em uma nova aba. Um projeto
+sem `image` mostra um wireframe do tipo dele (site, landing page, sistema ou link bio).
 
 Para desligar a animação de abertura, use `SHOW_SPLASH = false` em `src/data/site.ts`.

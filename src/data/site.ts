@@ -1,3 +1,9 @@
+import type { StaticImageData } from 'next/image';
+import a10Img from '@/assets/images/projects/artur-a10.jpg';
+import fantaImg from '@/assets/images/projects/fanta.jpg';
+import karolineImg from '@/assets/images/projects/karoline-herminio.jpg';
+import petDevImg from '@/assets/images/projects/pet-dev.jpg';
+
 /**
  * Conteúdo do site. Os valores entre colchetes são placeholders —
  * troque pelos dados reais antes de publicar.
@@ -55,16 +61,38 @@ export const projectKindLabel: Record<ProjectKind, string> = {
 export interface Project {
   name: string;
   kind: ProjectKind;
+  /** Site no ar — o card abre esse link em uma nova aba. */
   href: string;
+  /** Print da tela inicial. Sem print, o card mostra um wireframe do tipo do projeto. */
+  image?: StaticImageData;
 }
 
-const kinds: ProjectKind[] = ['site', 'lp', 'sys', 'bio'];
-
-export const projects: Project[] = Array.from({ length: 8 }, (_, i) => ({
-  name: `[PROJETO ${String(i + 1).padStart(2, '0')}]`,
-  kind: kinds[i % kinds.length],
-  href: '#',
-}));
+export const projects: Project[] = [
+  {
+    name: 'Karoline Herminio Fisioterapia',
+    kind: 'site',
+    href: 'https://karoline-herminio-fisioterapia.vercel.app/',
+    image: karolineImg,
+  },
+  {
+    name: 'Fanta',
+    kind: 'lp',
+    href: 'https://site-fanta-blond.vercel.app/',
+    image: fantaImg,
+  },
+  {
+    name: 'Artur A10',
+    kind: 'site',
+    href: 'https://a10-craque.vercel.app/',
+    image: a10Img,
+  },
+  {
+    name: 'Pet Dev',
+    kind: 'site',
+    href: 'https://pet-dev-three.vercel.app/',
+    image: petDevImg,
+  },
+];
 
 export interface Contact {
   label: string;
