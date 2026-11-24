@@ -1,6 +1,7 @@
 import { Footer } from '@/components/layout/Footer';
 import { NavBar } from '@/components/layout/NavBar';
 import { SplashScreen } from '@/components/layout/SplashScreen';
+import { ScrollReveal } from '@/components/ScrollReveal';
 import { About } from '@/components/sections/About';
 import { Contact } from '@/components/sections/Contact';
 import { Hero } from '@/components/sections/Hero';
@@ -21,6 +22,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <ScrollReveal />
     </div>
   );
 }

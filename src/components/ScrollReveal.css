@@ -1,0 +1,103 @@
+/*
+ * Revelar ao rolar: qualquer elemento com data-reveal surge quando entra na tela.
+ * Variações: data-reveal="up" (padrão), "from-left", "from-right", "scale", "fade".
+ * Atraso em sequência: style={{ '--reveal-delay': '120ms' }}.
+ *
+ * Só esconde o conteúdo quando há JavaScript e a pessoa não pediu movimento reduzido,
+ * então ninguém fica com a página em branco.
+ */
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  [data-reveal] {
+    transition:
+      opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+      transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+      filter 0.8s ease;
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  [data-reveal]:not(.is-revealed) {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+
+  [data-reveal='from-left']:not(.is-revealed) {
+    transform: translateX(-48px);
+  }
+
+  [data-reveal='from-right']:not(.is-revealed) {
+    transform: translateX(48px);
+  }
+
+  [data-reveal='scale']:not(.is-revealed) {
+    transform: scale(0.9);
+  }
+
+  [data-reveal='fade']:not(.is-revealed) {
+    transform: none;
+    filter: blur(6px);
+  }
+}
+
+/*
+ * Efeitos presos à rolagem (parallax). Só onde o navegador suporta
+ * animações ligadas ao scroll; nos outros a página fica estática, como antes.
+ */
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    /* Hero: a foto desce mais devagar que a página e escurece ao sair. */
+    .hero__photo {
+      animation: scroll-hero-photo linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 820px;
+    }
+
+    /* Hero: os serviços em órbita sobem e somem antes do resto. */
+    .orbit {
+      animation: scroll-hero-orbit linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 520px;
+    }
+
+    /* Sobre: a foto corre um pouco mais devagar que o texto. */
+    .about__img {
+      scale: 1.12;
+      animation: scroll-about-photo linear both;
+      animation-timeline: view();
+      animation-range: cover;
+    }
+
+    /* Projetos: as duas esteiras deslizam em sentidos opostos com a rolagem. */
+    .marquee__row {
+      animation: scroll-marquee-a linear both;
+      animation-timeline: view();
+      animation-range: entry 0% exit 100%;
+    }
+
+    .marquee__row--reverse {
+      animation-name: scroll-marquee-b;
+    }
+  }
+}
+
+@keyframes scroll-hero-photo {
+  to { translate: 0 160px; opacity: 0.25; }
+}
+
+@keyframes scroll-hero-orbit {
+  to { translate: 0 -80px; opacity: 0; }
+}
+
+@keyframes scroll-about-photo {
+  from { translate: 0 -6%; }
+  to { translate: 0 6%; }
+}
+
+@keyframes scroll-marquee-a {
+  from { translate: 80px 0; }
+  to { translate: -80px 0; }
+}
+
+@keyframes scroll-marquee-b {
+  from { translate: -80px 0; }
+  to { translate: 80px 0; }
+}

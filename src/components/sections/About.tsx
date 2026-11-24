@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/brand';
+import { revealDelay } from '@/components/reveal';
 import { reasons } from '@/data/site';
 import aboutImg from '@/assets/images/about.jpg';
 import './About.css';
@@ -27,14 +28,14 @@ export function About() {
       />
 
       <div className="about__text">
-        <div className="eyebrow-row">
+        <div className="eyebrow-row" data-reveal="from-left">
           <span className="eyebrow-bar" aria-hidden="true" />
           <p className="eyebrow">Sobre mim</p>
         </div>
-        <h2 className="about__title">
+        <h2 className="about__title" data-reveal style={revealDelay(100)}>
           Prazer, eu sou Wesley<span className="accent">.</span>
         </h2>
-        <p className="about__bio">
+        <p className="about__bio" data-reveal style={revealDelay(200)}>
           Sou desenvolvedor web e trato cada projeto como se fosse meu. Antes de criar qualquer coisa, gosto de
           entender a história do negócio e da pessoa por trás dele.
         </p>
@@ -42,7 +43,12 @@ export function About() {
 
       <ul className="about__spots" aria-label="Por que estar na internet">
         {reasons.map((reason, i) => (
-          <li key={reason} className="about__spot" style={{ '--x': SPOTS[i].x, '--y': SPOTS[i].y } as CSSProperties}>
+          <li
+            key={reason}
+            className="about__spot"
+            data-reveal="scale"
+            style={{ '--x': SPOTS[i].x, '--y': SPOTS[i].y, ...revealDelay(i * 140) } as CSSProperties}
+          >
             <span className="about__dot" aria-hidden="true">
               <span className="about__ring" style={{ animationDelay: `${i * 0.65}s` }} />
             </span>
@@ -52,10 +58,10 @@ export function About() {
       </ul>
 
       <div className="about__bottom">
-        <p className="about__statement">
+        <p className="about__statement" data-reveal>
           Se o seu negócio não está na internet, ele está <span className="accent">invisível</span>.
         </p>
-        <div className="about__cta">
+        <div className="about__cta" data-reveal="scale" style={revealDelay(150)}>
           <Button variant="primary" size="lg" href="#contato">
             Quero aparecer
           </Button>
