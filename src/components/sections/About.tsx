@@ -22,6 +22,7 @@ export function About() {
         alt="Wesley Filho de perfil, olhando para as luzes da cidade à noite"
         fill
         sizes="100vw"
+        quality={90}
         placeholder="blur"
       />
 
