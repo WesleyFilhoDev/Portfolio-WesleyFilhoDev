@@ -32,10 +32,10 @@ src/
   hooks/useInView.ts  # dispara as animações quando a seção entra na tela
 ```
 
-## Antes de publicar
+## Conteúdo
 
-Os campos entre colchetes em `src/data/site.ts` são placeholders: `[SEU WHATSAPP]`, `[SEU E-MAIL]`
-e `[SEU @]` (e os links `href: '#'` dos contatos). Troque pelos dados reais.
+Contatos (WhatsApp, e-mail e Instagram) ficam em `contacts` em `src/data/site.ts`. Os botões
+"Falar no WhatsApp" e "Pedir orçamento" (seção Contato) abrem o WhatsApp com uma mensagem já escrita.
 
 ## Projetos
 

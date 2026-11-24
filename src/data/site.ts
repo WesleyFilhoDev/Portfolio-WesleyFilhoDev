@@ -4,10 +4,7 @@ import fantaImg from '@/assets/images/projects/fanta.jpg';
 import karolineImg from '@/assets/images/projects/karoline-herminio.jpg';
 import petDevImg from '@/assets/images/projects/pet-dev.jpg';
 
-/**
- * Conteúdo do site. Os valores entre colchetes são placeholders —
- * troque pelos dados reais antes de publicar.
- */
+/** Conteúdo do site: textos, projetos e contatos. */
 
 /** Mostra a animação de abertura (logo sendo desenhado) ao carregar a página. */
 export const SHOW_SPLASH = true;
@@ -101,10 +98,19 @@ export interface Contact {
   icon: 'chat' | 'mail' | 'instagram';
 }
 
+const WHATSAPP_NUMBER = '5588994947226';
+
+/** Abre a conversa no WhatsApp, opcionalmente com uma mensagem já escrita. */
+export const whatsappLink = (message?: string) =>
+  `https://wa.me/${WHATSAPP_NUMBER}${message ? `?text=${encodeURIComponent(message)}` : ''}`;
+
+export const WHATSAPP_URL = whatsappLink('Olá, Wesley! Vim pelo seu portfólio.');
+export const QUOTE_URL = whatsappLink('Olá, Wesley! Vim pelo seu portfólio e quero pedir um orçamento.');
+
 export const contacts: Contact[] = [
-  { label: 'WhatsApp', value: '[SEU WHATSAPP]', href: '#', icon: 'chat' },
-  { label: 'E-mail', value: '[SEU E-MAIL]', href: '#', icon: 'mail' },
-  { label: 'Instagram', value: '[SEU @]', href: '#', icon: 'instagram' },
+  { label: 'WhatsApp', value: '(88) 9.9494-7226', href: WHATSAPP_URL, icon: 'chat' },
+  { label: 'E-mail', value: 'wesleyfilho.dev@gmail.com', href: 'mailto:wesleyfilho.dev@gmail.com', icon: 'mail' },
+  { label: 'Instagram', value: '@euwesleyfilho.dev', href: 'https://www.instagram.com/euwesleyfilho.dev/', icon: 'instagram' },
 ];
 
 /** Tempo (ms) até a abertura sair da tela. Acompanha a animação em SplashScreen.css. */

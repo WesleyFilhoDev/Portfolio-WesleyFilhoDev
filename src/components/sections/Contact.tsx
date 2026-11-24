@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/brand';
 import { ArrowUpRight, ChatIcon, InstagramIcon, MailIcon } from '@/components/icons';
-import { contacts, SHOW_SPLASH, SPLASH_DURATION, type Contact as ContactItem } from '@/data/site';
+import { contacts, QUOTE_URL, SHOW_SPLASH, SPLASH_DURATION, type Contact as ContactItem } from '@/data/site';
 import { useInView } from '@/hooks/useInView';
 import './Contact.css';
 
@@ -13,6 +13,19 @@ const icons: Record<ContactItem['icon'], typeof ChatIcon> = {
   mail: MailIcon,
   instagram: InstagramIcon,
 };
+
+/** Em telas estreitas, deixa o e-mail quebrar antes do "@" em vez de no meio do domínio. */
+function breakBeforeAt(value: string) {
+  const at = value.indexOf('@');
+  if (at <= 0) return value;
+  return (
+    <>
+      {value.slice(0, at)}
+      <wbr />
+      {value.slice(at)}
+    </>
+  );
+}
 
 export function Contact() {
   const [ref, on] = useInView<HTMLElement>({ startDelay: SHOW_SPLASH ? SPLASH_DURATION : 0 });
@@ -46,7 +59,7 @@ export function Contact() {
           </p>
         </div>
         <div className="contact__cta">
-          <Button variant="primary" size="lg" href={contacts[0].href}>
+          <Button variant="primary" size="lg" href={QUOTE_URL} target="_blank" rel="noopener noreferrer">
             Pedir orçamento
           </Button>
         </div>
@@ -57,13 +70,18 @@ export function Contact() {
           {contacts.map((contact) => {
             const Icon = icons[contact.icon];
             return (
-              <a key={contact.label} className="contact-tile" href={contact.href}>
+              <a
+                key={contact.label}
+                className="contact-tile"
+                href={contact.href}
+                {...(contact.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              >
                 <span className="contact-tile__icon">
                   <Icon />
                 </span>
                 <span className="contact-tile__text">
                   <span className="contact-tile__label">{contact.label}</span>
-                  <span className="contact-tile__value">{contact.value}</span>
+                  <span className="contact-tile__value">{breakBeforeAt(contact.value)}</span>
                 </span>
                 <ArrowUpRight className="contact-tile__arrow" />
               </a>

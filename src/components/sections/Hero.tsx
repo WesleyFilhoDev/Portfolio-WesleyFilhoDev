@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Button } from '@/components/brand';
-import { heroServices } from '@/data/site';
+import { heroServices, WHATSAPP_URL } from '@/data/site';
 import heroImg from '@/assets/images/hero.jpg';
 import './Hero.css';
 
@@ -46,7 +46,7 @@ export function Hero() {
           <Button variant="primary" size="lg" href="#contato">
             Pedir orçamento
           </Button>
-          <Button variant="outline" size="lg" href="#contato">
+          <Button variant="outline" size="lg" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
             Falar no WhatsApp
           </Button>
         </div>
