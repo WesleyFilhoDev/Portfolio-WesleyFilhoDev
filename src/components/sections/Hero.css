@@ -4,9 +4,27 @@
   overflow: hidden;
 }
 
+.hero {
+  /* Quanto menor, mais "de longe" a foto aparece (1 = ocupando a hero inteira). */
+  --hero-photo-scale: 0.74;
+}
+
+/* Área da foto: no máximo 1440px, para o zoom não crescer em telas maiores. */
+.hero__photo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: min(100%, 1440px);
+  transform: translateX(-50%);
+}
+
 .hero__img {
   object-fit: cover;
   object-position: 50% 30%;
+  /* Reduz a foto mantendo o rosto no mesmo ponto da tela (onde os serviços orbitam). */
+  transform-origin: 52% 28%;
+  transform: scale(var(--hero-photo-scale));
   opacity: 0;
   animation: hero-zoom 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) 2.95s forwards;
   -webkit-mask-image: radial-gradient(ellipse 46% 70% at 50% 38%, #000 55%, transparent 100%);
@@ -169,11 +187,14 @@
 }
 
 @keyframes hero-zoom {
-  from { opacity: 0; transform: scale(1.06); }
-  to { opacity: 1; transform: none; }
+  from { opacity: 0; transform: scale(calc(var(--hero-photo-scale) * 1.06)); }
+  to { opacity: 1; transform: scale(var(--hero-photo-scale)); }
 }
 
 @media (max-width: 760px) {
+  /* No celular os serviços viram chips no topo: a foto começa logo abaixo deles. */
+  .hero { --hero-photo-scale: 0.94; }
+  .hero__photo { top: 220px; }
   .orbit {
     left: 16px;
     right: 16px;
