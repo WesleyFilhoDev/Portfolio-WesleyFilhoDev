@@ -1,0 +1,152 @@
+.about {
+  position: relative;
+  height: 860px;
+  overflow: hidden;
+}
+
+.about__img {
+  object-fit: cover;
+  object-position: 60% 40%;
+  -webkit-mask-image: linear-gradient(to top, transparent 0, #000 22%), linear-gradient(to bottom, transparent 0, #000 12%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to top, transparent 0, #000 22%), linear-gradient(to bottom, transparent 0, #000 12%);
+  mask-composite: intersect;
+}
+
+.about__text {
+  position: absolute;
+  left: max(24px, calc((100% - 1200px) / 2));
+  top: 80px;
+  width: min(640px, calc(100% - 48px));
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.about__title {
+  margin: 0;
+  font-size: 52px;
+  line-height: 58px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.about__bio {
+  margin: 0;
+  font-size: 19px;
+  line-height: 30px;
+  color: #c9d2e0;
+  max-width: 560px;
+}
+
+.about__spots {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about__spot {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.about__dot {
+  position: relative;
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.about__ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  animation: about-pulse 2.6s ease-out infinite;
+}
+
+.about__pill {
+  padding: 10px 16px;
+  border-radius: var(--radius-full);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.about__bottom {
+  position: absolute;
+  left: max(24px, calc((100% - 1200px) / 2));
+  right: max(24px, calc((100% - 1200px) / 2));
+  bottom: 56px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px 40px;
+}
+
+.about__statement {
+  margin: 0;
+  max-width: 880px;
+  font-size: clamp(34px, 3.9vw, 56px);
+  line-height: 1.11;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+
+.about__cta {
+  flex-shrink: 0;
+  display: flex;
+}
+
+@keyframes about-pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(3.2); opacity: 0; }
+}
+
+@media (max-width: 760px) {
+  .about {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 64px 24px;
+  }
+  .about__text,
+  .about__bottom,
+  .about__spots,
+  .about__spot {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    width: auto;
+  }
+  .about__spots {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .about__pill {
+    white-space: normal;
+  }
+  .about__title {
+    font-size: 40px;
+    line-height: 46px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about__ring { animation: none; opacity: 0; }
+}

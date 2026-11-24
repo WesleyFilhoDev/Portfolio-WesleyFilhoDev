@@ -1,0 +1,43 @@
+/* Ported from the Wesley Filho Dev design system (wfdev bundle). */
+
+/* Monogram */
+.wf-mark { display: block; flex-shrink: 0; }
+.wf-mark__main { stroke: var(--logo-main); }
+.wf-mark__fill { fill: var(--logo-main); }
+.wf-mark__accent { stroke: var(--logo-accent); }
+.wf-mark--onBrand .wf-mark__main { stroke: var(--on-brand); }
+.wf-mark--onBrand .wf-mark__fill { fill: var(--on-brand); }
+.wf-mark--onBrand .wf-mark__accent { stroke: var(--accent); }
+
+/* Logo */
+.wf-logo { display: inline-flex; align-items: center; gap: 0.6em; font-family: var(--font-sans); line-height: 1; }
+.wf-logo__words { display: inline-flex; flex-direction: column; gap: 0.32em; }
+.wf-logo__name { font-weight: 700; letter-spacing: -0.03em; color: var(--ink); white-space: nowrap; }
+.wf-logo__dev { font-weight: 500; letter-spacing: 0.34em; text-transform: uppercase; color: var(--ink-muted); }
+.wf-logo--sm { font-size: 18px; }
+.wf-logo--md { font-size: 26px; }
+.wf-logo--lg { font-size: 48px; }
+.wf-logo--xl { font-size: 80px; }
+.wf-logo--sm .wf-logo__dev { font-size: 10px; }
+.wf-logo--md .wf-logo__dev { font-size: 12px; }
+.wf-logo--lg .wf-logo__dev { font-size: 16px; }
+.wf-logo--xl .wf-logo__dev { font-size: 22px; }
+.wf-logo--onBrand .wf-logo__name,
+.wf-logo--onBrand .wf-logo__dev { color: var(--on-brand); }
+
+/* Button */
+.wf-btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); font-family: var(--font-sans); font-weight: 600; text-decoration: none; border: 1px solid transparent; border-radius: var(--radius-md); cursor: pointer; transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease; white-space: nowrap; }
+.wf-btn--md { min-height: 44px; padding: 0 20px; font-size: 15px; }
+.wf-btn--lg { min-height: 52px; padding: 0 26px; font-size: 16px; }
+.wf-btn--block { display: flex; width: 100%; }
+.wf-btn--primary, .wf-btn--primary:hover { color: var(--on-brand); }
+.wf-btn--primary { background: var(--brand); }
+.wf-btn--primary:hover { background: var(--brand-hover); }
+.wf-btn--secondary, .wf-btn--secondary:hover { background: var(--brand-soft); color: var(--ink); }
+.wf-btn--secondary:hover { border-color: var(--line-strong); }
+.wf-btn--outline, .wf-btn--outline:hover { background: none; border-color: var(--accent-ink); color: var(--accent-ink); }
+.wf-btn--outline:hover { background: var(--accent-soft); }
+.wf-btn--ghost, .wf-btn--ghost:hover { background: none; color: var(--ink); }
+.wf-btn--ghost:hover { background: var(--surface-raised); }
+.wf-btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.wf-btn:disabled, .wf-btn[aria-disabled="true"] { opacity: 0.5; cursor: not-allowed; }

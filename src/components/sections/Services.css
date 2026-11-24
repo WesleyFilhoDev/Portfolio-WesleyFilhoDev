@@ -1,0 +1,165 @@
+.services {
+  padding: 96px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.services .section-lede {
+  max-width: 440px;
+}
+
+/* Trilha em zigue-zague: o traço do W conectando os serviços */
+.trail {
+  position: relative;
+  height: 520px;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.trail__svg {
+  position: absolute;
+  inset: 0;
+}
+
+.trail__svg svg {
+  display: block;
+  width: 100%;
+  height: 520px;
+}
+
+.trail__line,
+.trail__line-flow {
+  fill: none;
+  stroke-width: 10;
+  stroke-linejoin: bevel;
+  stroke-miterlimit: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.trail__line { stroke: var(--brand); }
+.trail__line-flow { stroke: var(--accent); }
+
+.trail__reveal { clip-path: inset(0 100% 0 0); }
+.trail__flow { clip-path: inset(0 100% 0 -8%); opacity: 0; }
+
+.trail__node {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 4px solid var(--brand);
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.trail__node--end {
+  width: 30px;
+  height: 30px;
+  background: var(--accent);
+  border: 0;
+}
+
+.trail__fbar {
+  position: absolute;
+  left: 93.06%;
+  top: 365px;
+  width: 6.94%;
+  height: 10px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.trail__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.trail__item {
+  position: absolute;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.trail__num {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--accent-ink);
+}
+
+.trail__title {
+  margin: 0;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.trail__desc {
+  margin: 0;
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--ink-muted);
+}
+
+.trail__item .wf-btn {
+  margin-top: 6px;
+}
+
+.trail--on .trail__reveal { animation: trail-reveal 2.4s linear forwards; }
+.trail--on .trail__node { animation: trail-node 0.45s cubic-bezier(0.2, 0.8, 0.3, 1.4) forwards; }
+.trail--on .trail__item { animation: trail-item 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) forwards; }
+.trail--on .trail__fbar { animation: trail-fbar 0.45s ease-out 2.4s forwards; }
+.trail--on .trail__flow { animation: trail-flow 3.2s linear 3s infinite; }
+
+@keyframes trail-reveal { to { clip-path: inset(0 0 0 0); } }
+@keyframes trail-node { to { transform: translate(-50%, -50%) scale(1); } }
+@keyframes trail-item { to { opacity: 1; transform: none; } }
+@keyframes trail-fbar { to { transform: scaleX(1); } }
+@keyframes trail-flow {
+  0% { opacity: 1; clip-path: inset(0 100% 0 -8%); }
+  100% { opacity: 1; clip-path: inset(0 -8% 0 100%); }
+}
+
+@media (max-width: 900px) {
+  .trail { height: auto; }
+  .trail__svg,
+  .trail__node,
+  .trail__fbar { display: none; }
+  .trail__list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 0 24px;
+  }
+  .trail__list .trail__item {
+    position: static;
+    width: auto;
+    text-align: left;
+    align-items: flex-start;
+    padding-left: 20px;
+    border-left: 4px solid var(--brand);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trail__reveal { clip-path: none; }
+  .trail__flow { display: none; }
+  .trail__node { transform: translate(-50%, -50%); }
+  .trail__item { opacity: 1; transform: none; }
+  .trail__fbar { transform: none; }
+  .trail--on .trail__reveal,
+  .trail--on .trail__node,
+  .trail--on .trail__item,
+  .trail--on .trail__fbar { animation: none; }
+}
