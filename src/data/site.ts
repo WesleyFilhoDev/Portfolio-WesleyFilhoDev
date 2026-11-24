@@ -1,6 +1,7 @@
 import type { StaticImageData } from 'next/image';
 import a10Img from '@/assets/images/projects/artur-a10.jpg';
 import fantaImg from '@/assets/images/projects/fanta.jpg';
+import comprovedImg from '@/assets/images/projects/comproved.jpg';
 import karolineImg from '@/assets/images/projects/karoline-herminio.jpg';
 import petDevImg from '@/assets/images/projects/pet-dev.jpg';
 
@@ -88,6 +89,12 @@ export const projects: Project[] = [
     kind: 'site',
     href: 'https://pet-dev-three.vercel.app/',
     image: petDevImg,
+  },
+  {
+    name: 'Comproved',
+    kind: 'sys',
+    href: 'https://www.comproved.com.br/',
+    image: comprovedImg,
   },
 ];
 
